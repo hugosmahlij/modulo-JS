@@ -54,23 +54,30 @@ switch(superheroe{
         break
 } */
 
+//PUNTO 1
 
-let numeroUno = 14
+/* let numeroUno = 11
 let numeroDos = 12
 let numeroTres = 2
 
 if (numeroUno > numeroDos){
     console.log(numeroUno + " es mayor que " + numeroDos);
-}
+}else{
+    console.log(numeroUno + " no es mayor que " + numeroDos);
+} */
 
-if (numeroUno !== numeroDos){
+//PUNTO 2
+
+/* if (numeroUno !== numeroDos){
     console.log("Son distintos");
 
 }else{
     console.log("Son iguales");
-}
+} */
 
-if (numeroUno > numeroDos){
+//PUNTO 3
+
+/* if (numeroUno > numeroDos){
     console.log("El primero es mayor")
 }else{
     if (numeroDos > numeroUno){
@@ -78,9 +85,11 @@ if (numeroUno > numeroDos){
     }else{
         console.log("Son iguales");
     }
-}
+} */
 
-if (numeroUno < numeroDos && numeroUno < numeroTres){
+//PUNTO 4
+
+/* if (numeroUno < numeroDos && numeroUno < numeroTres){
     console.log(numeroUno + " es el menor");
 }else{
     if (numeroDos < numeroUno && numeroDos < numeroTres){
@@ -88,9 +97,11 @@ if (numeroUno < numeroDos && numeroUno < numeroTres){
     }else{
         console.log(numeroTres + " es el menor");
     }
-}
+} */
 
-let personaUno = {
+//PUNTO 5
+
+/* let personaUno = {
     nombre: "Piyu",
     edad: 18,
     altura: 150
@@ -112,9 +123,11 @@ if (personaUno.altura > personaDos.altura){
     console.log("La primer persona es más alta");
 }else{
     console.log("La segunda persona es más alta");
-}
+} */
 
-let persona = {
+//PUNTO 6
+
+/* let persona = {
     nombre: prompt("Ingrese su nombre"),
     edad: prompt("Ingrese su edad"),
     altura: prompt("Ingrese su altura"),
@@ -125,5 +138,166 @@ if (persona.edad >= 18 && persona.altura > 150 && persona.vision >= 8){
     console.log(persona.nombre + " está capacitado para conducir.");
 }else{
     console.log(persona.nombre + " no reúne los requisitos mínimos.");
+} */
+
+//PUNTO 7
+
+/* let usuario = {
+    nombre: prompt("Ingrese su nombre"),
+    entrada: prompt("Indique si posee una entrada"),
+    pase: prompt("Indique si posee pase normal o vip")
 }
 
+let accesoEntrada
+
+let comprarEntrada
+
+let dineroUsuario
+
+let dineroEntrada
+
+if (usuario.nombre == "Hugo" || usuario.pase == "vip"){
+    console.log("¡Bienvenido/a!");
+}else{
+    if (usuario.entrada == "si" || usuario.entrada == "s" || usuario.entrada == "true"){
+       accesoEntrada = prompt("¿Desea utilizar su entrada?")
+       if (accesoEntrada == "si" || accesoEntrada == "s" || accesoEntrada == "true"){
+        console.log("¡Bienvenido/a!");
+       }else{
+        console.log("¡Muchas gracias, hasta luego!");
+       }
+    }else{
+        comprarEntrada = prompt("¿Desea comprar unra entrada?")
+        if (comprarEntrada == "si" || comprarEntrada == "s" || comprarEntrada == "true"){
+            dineroEntrada = prompt("¿Cuánto dinero posee?")
+            if (dineroEntrada >= 1000){
+                console.log("¡Entrada vendida, bienvenido/a!");
+            }else{
+                console.log("No posee suficiente dinero.");
+            }
+        }else{
+            console.log("¡Hasta luego!");
+        }
+    }
+} */
+
+//PUNTO 8
+
+/* let numeroIncognita = 4
+
+let numeroIngresadoUno = prompt("Ingrese un número del 1 al 10")
+
+let numeroIngresadoDos
+
+let numeroIngresadoTres
+
+if (numeroIngresadoUno == numeroIncognita){
+    console.log("Ganaste, haz adivinado el número");
+}else{
+    if (numeroIngresadoUno < numeroIncognita){
+        console.log("El número ingresado es menor, vuelve a intentarlo");
+    }else{
+        console.log("El número ingresado es mayor, vuelve a intentarlo");
+    } numeroIngresadoDos = prompt("Ups, intenta de nuevo")
+        if (numeroIngresadoDos == numeroIncognita){
+            console.log("Ganaste, haz adivinado el número");
+        }else{
+          if (numeroIngresadoDos < numeroIncognita){
+            console.log("El número ingresado es menor, vuelve a intentarlo");
+          }else{
+            console.log("El número ingresado es mayor, vuelve a intentarlo");
+          }
+        } numeroIngresadoTres = prompt("Ups, intenta de nuevo")
+            if (numeroIngresadoTres == numeroIncognita){
+                console.log("Ganaste, haz adivinado el número");
+            }else{
+                if (numeroIngresadoTres < numeroIncognita){
+                    console.log("El número ingresado es menor, vuelve a intentarlo");
+                }else{
+                    console.log("El número ingresado es mayor, vuelve a intentarlo");
+                }
+            }
+} */
+
+
+//PUNTO 9
+
+/* let edad = prompt("Ingrese su edad")
+
+if (edad <= 12){
+    console.log("Eres un infante");
+}else{
+    if (edad >= 13 && edad <= 18){
+        console.log("Eres un adolescente");
+    }else{
+        if (edad >= 19 && edad <= 45){
+            console.log("Eres un mayor joven");
+        }else{
+            if (edad >= 46 && edad <= 99){
+                console.log("Eres un anciano");
+            }else{
+                if (edad >= 100)
+                console.log("¿Realmente tienes esa edad?");
+            }
+        }
+    }
+} */
+
+//PUNTO 10
+
+/* let usuarioUno = prompt ("Ingrese una opcion: piedra,papel,tijera")
+let usuarioDos = prompt ("Ingrese una opcion: piedra,papel,tijera")
+
+
+if (usuarioUno === "piedra" && usuarioDos === "piedra" || usuarioUno === "papel" && usuarioDos === "papel" || usuarioUno  === "tijeras" && usuarioDos === "tijeras") {
+    console.log("Empate!");
+}else{
+    if (usuarioUno == "piedra" && usuarioDos == "tijera" || usuarioUno == "tijera" && usuarioDos == "papel" || usuarioUno == "papel" && usuarioDos == "piedra" ){
+        console.log("Gano el uno");
+    }else{
+        if (usuarioUno == "piedra" && usuarioDos == "papel" || usuarioUno == "tijera" && usuarioDos == "piedra" || usuarioUno == "papel" && usuarioDos == "tijera" ) {
+            console.log("Gana el dos");
+        }else{
+            if (usuarioUno != "piedra" || usuarioUno != "papel"  ||usuarioUno != "tijera ") {
+                console.log("Usuario uno hizo trampa");
+            }else {
+                if (usuarioDos != "piedra" || usuarioDos != "papel" || usuarioDos != "tijera"){
+                    console.log("Usuario dos hizo trampa");
+                }
+            }
+        }
+    } 
+} */
+
+//PUNTO 11
+
+/* let color = prompt ("Ingrese un color")
+
+switch (color) {
+    case "blanco":
+        console.log("Falta color");
+        break;
+    case "negro":
+        console.log("Falta color");
+        break;
+    case "verde":
+        console.log("El color de la naturaleza");
+        break;
+    case "azul":
+        console.log("El color del agua");
+        break;
+    case "amarillo":
+        console.log("El color del sol");
+        break;
+    case "rojo":
+        console.log("El color del fuego");
+        break;
+    case "marron":
+        console.log("El color de la tierra");
+        break;
+    default:
+        console.log("Exccelente eleccion, no lo teniamos pensado");
+        break;
+} */
+
+//PUNTO 12
