@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-item{
+    background-color: white;
+    border-radius: 1em;
+    gap: 10em !important;
+}
+
+.carousel_a{
+    background-color: rgba(182, 178, 178, 0.5);
+    height: 4em;
+}
+
+.header{
+    height: 5em;
+}
+
+.footer{
+    height: 5em;
+}
+
+.logo_footer{
+    width: 3em;
+}
+
+.main{
+    min-height: calc(100vh - 100px - 300px);
+}
