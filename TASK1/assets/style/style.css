@@ -19,6 +19,14 @@
     height: 5em;
 }
 
+.footer{
+    height: 5em;
+}
+
 .logo_footer{
     width: 3em;
+}
+
+.main{
+    min-height: calc(100vh - 100px - 300px);
 }
