@@ -31,7 +31,7 @@ let nombreUsuario = prompt( 'Ingrese su nombre' )
 
 console.log(nombreUsuario) */
 
-let miNombre = "Hugo"
+/* let miNombre = "Hugo"
 
 let miApellido = "Smahlij"
 
@@ -140,4 +140,16 @@ console.log(familia[5])
 
 let textoAleatorio = frutas[1] + " " + numeros[3] + " " + familia[4]
 
-console.log(textoAleatorio)
+console.log(textoAleatorio) */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////  PRACTICA JS - JSON/API  ///////////////////////////////////////////////////////////////////////////////////
+
+const aplication = document.querySelector('.container')
+
+const url = 'https://jsonplaceholder.typicode.com/users'
+
+fetch(url)
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
