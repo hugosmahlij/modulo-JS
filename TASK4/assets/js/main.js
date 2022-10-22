@@ -16,6 +16,23 @@ const pastCard = card
 let cardsCombined = [...homeCard, ...upcomingCard, ...pastCard];
 cardsCombined.forEach(getCard);
 
+async function bringEventsJson(){
+  try{
+    var eventsJsonApi = await fetch ('https://amazing-events.herokuapp.com/api/events')
+    eventsJsonApi = await eventsJsonApi.json()
+  }catch(error){
+    console.log(error)
+  }
+  
+
+}
+
+
+
+
+
+
+
 const categorys = card.reduce(
   (allCatergory, event) =>
     Array.from(new Set([...allCatergory, event.category])),
