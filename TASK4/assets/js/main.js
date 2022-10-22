@@ -11,7 +11,6 @@ async function bringEventsJson(){
   }catch(error){
     console.log(error)
   }
-  
   const date = eventsJsonApi.currentDate;
   
   const card = eventsJsonApi.events;
@@ -30,7 +29,7 @@ async function bringEventsJson(){
     let cardsCombined = [...homeCard, ...upcomingCard, ...pastCard];
     cardsCombined.forEach(getCard);
   categorys.forEach(getCheckBox);
-  
+
   function getCheckBox(category) {
     containerCheckBox.innerHTML += `
       <div class="form-check">
