@@ -3,31 +3,33 @@ const title = document.getElementById("title");
 const containerCheckBox = document.getElementById("container_checkbox");
 const inputSearch = document.getElementById("search");
 
-
-async function bringEventsJson(){
-  try{
-    var eventsJsonApi = await fetch ('https://amazing-events.herokuapp.com/api/events')
-    eventsJsonApi = await eventsJsonApi.json()
-  }catch(error){
-    console.log(error)
+async function bringEventsJson() {
+  try {
+    var eventsJsonApi = await fetch(
+      "https://amazing-events.herokuapp.com/api/events"
+    );
+    eventsJsonApi = await eventsJsonApi.json();
+  } catch (error) {
+    console.log(error);
   }
+
   const date = eventsJsonApi.currentDate;
-  
   const card = eventsJsonApi.events;
   const homeCard = card.filter(() => title.textContent.includes("Home"));
   const upcomingCard = card
-  .filter(() => title.textContent.includes("Upcoming"))
-  .filter((card) => date < card.date);
+    .filter(() => title.textContent.includes("Upcoming"))
+    .filter((card) => date < card.date);
   const pastCard = card
-  .filter(() => title.textContent.includes("Past"))
-  .filter((card) => date > card.date);
+    .filter(() => title.textContent.includes("Past"))
+    .filter((card) => date > card.date);
   const categorys = card.reduce(
     (allCatergory, event) =>
-    Array.from(new Set([...allCatergory, event.category])),
+      Array.from(new Set([...allCatergory, event.category])),
     []
-    );
-    let cardsCombined = [...homeCard, ...upcomingCard, ...pastCard];
-    cardsCombined.forEach(getCard);
+  );
+  
+  let cardsCombined = [...homeCard, ...upcomingCard, ...pastCard];
+  cardsCombined.forEach(getCard);
   categorys.forEach(getCheckBox);
 
   function getCheckBox(category) {
@@ -45,13 +47,13 @@ async function bringEventsJson(){
       </div>
     `;
   }
-  
+
   let boxId = document.querySelectorAll(".boxId");
   boxId = Array.from(boxId);
   boxId.forEach((box) => box.addEventListener("click", boxChecked));
-  
+
   inputSearch.addEventListener("input", boxChecked);
-  
+
   function boxChecked() {
     let filterBox = checkCategory(cardsCombined);
     let filterSearch = cardsBySearch(filterBox, inputSearch.value);
@@ -60,7 +62,7 @@ async function bringEventsJson(){
     }
     filterSearch.forEach(getCard);
   }
-  
+
   function checkCategory(array) {
     let checkedBoxes = boxId
       .filter((check) => check.checked)
@@ -75,7 +77,7 @@ async function bringEventsJson(){
   }
 }
 
-bringEventsJson()
+bringEventsJson();
 
 function cardsBySearch(array, text) {
   let cardsFilterBySearch = array.filter((card) =>
@@ -96,6 +98,7 @@ function searchNull() {
 </div>
   `;
 }
+
 function getCard(event) {
   container.innerHTML += `
     <div class="card mt-4 m-1 card">
