@@ -2,7 +2,7 @@ const containerDetails = document.getElementById("container_details");
 
 async function bringIdJson() {
   try {
-    var idCard = await fetch("https://amazing-events.herokuapp.com/api/events");
+    var idCard = await fetch("https://mind-hub.up.railway.app/amazing");
     idCard = await idCard.json();
   } catch (error) {
     console.log(error);
@@ -10,7 +10,7 @@ async function bringIdJson() {
   const idLocation = location.search.slice(4);
   const allEvents = idCard.events;
 
-  let filterEvents = allEvents.filter((event) => idLocation == event._id);
+  let filterEvents = allEvents.filter((event) => idLocation == event.id);
   filterEvents = filterEvents[0];
   cardDetails(filterEvents);
 }
@@ -18,6 +18,7 @@ async function bringIdJson() {
 bringIdJson();
 
 function cardDetails(event) {
+  date = new Date(event.date).toDateString();
   if (event.assistance != undefined) {
     containerDetails.innerHTML = `
     <div class="card mb-3 w-75">
@@ -31,7 +32,7 @@ function cardDetails(event) {
                     <p class="card-text fw-semibold shadow-lg">Description: ${event.description}</p>
                     <p class="card-text fw-semibold shadow-lg">Category: ${event.category}</p>
                     <p class="card-text fw-semibold shadow-lg">Place: ${event.place}</p>
-                    <p class="card-text fw-semibold shadow-lg">Date: ${event.date}</p>
+                    <p class="card-text fw-semibold shadow-lg">Date: ${date}</p>
                     <p class="card-text fw-semibold shadow-lg">Capacity: ${event.capacity}</p>
                     <p class="card-text fw-semibold shadow-lg">Assistance: ${event.assistance}</p>
                     <p class="card-text fw-semibold shadow-lg">Price: $${event.price}</p>
@@ -53,7 +54,7 @@ function cardDetails(event) {
                     <p class="card-text fw-semibold shadow-lg">Description: ${event.description}</p>
                     <p class="card-text fw-semibold shadow-lg">Category: ${event.category}</p>
                     <p class="card-text fw-semibold shadow-lg">Place: ${event.place}</p>
-                    <p class="card-text fw-semibold shadow-lg">Date: ${event.date}</p>
+                    <p class="card-text fw-semibold shadow-lg">Date: ${date}</p>
                     <p class="card-text fw-semibold shadow-lg">Capacity: ${event.capacity}</p>
                     <p class="card-text fw-semibold shadow-lg">Estimated: ${event.estimate}</p>
                     <p class="card-text fw-semibold shadow-lg">Price: $${event.price}</p>

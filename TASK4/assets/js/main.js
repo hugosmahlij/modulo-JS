@@ -6,14 +6,14 @@ const inputSearch = document.getElementById("search");
 async function bringEventsJson() {
   try {
     var eventsJsonApi = await fetch(
-      "https://amazing-events.herokuapp.com/api/events"
+      "https://mind-hub.up.railway.app/amazing"
     );
     eventsJsonApi = await eventsJsonApi.json();
   } catch (error) {
     console.log(error);
   }
 
-  const date = eventsJsonApi.currentDate;
+  const date = eventsJsonApi.date;
   const card = eventsJsonApi.events;
   const homeCard = card.filter(() => title.textContent.includes("Home"));
   const upcomingCard = card
@@ -112,7 +112,7 @@ function getCard(event) {
             </p>
             <div class="w-100 d-flex align-items-center justify-content-evenly">
               <p>Price $${event.price}</p>
-              <a href="../pages/details.html?id=${event._id}" class="d-flex btn btn-danger">Details</a>
+              <a href="../pages/details.html?id=${event.id}" class="d-flex btn btn-danger">Details</a>
             </div>
           </div>
         </div>
