@@ -5,9 +5,7 @@ const inputSearch = document.getElementById("search");
 
 async function bringEventsJson() {
   try {
-    var eventsJsonApi = await fetch(
-      "https://mh-amazing.herokuapp.com/amazing"
-    );
+    var eventsJsonApi = await fetch("https://mh-amazing.herokuapp.com/amazing");
     eventsJsonApi = await eventsJsonApi.json();
   } catch (error) {
     console.log(error);
@@ -101,7 +99,7 @@ function searchNull() {
 
 function getCard(event) {
   container.innerHTML += `
-    <div class="card mt-4 m-1 card">
+    <div class="card mt-4 m-1 card_container">
           <img src="${event.image}" class="card-img-top img_card" alt="${event.name}" />
           <div
             class="card-body d-flex flex-column align-items-center justify-content-evenly shadow"

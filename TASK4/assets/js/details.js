@@ -2,7 +2,7 @@ const containerDetails = document.getElementById("container_details");
 
 async function bringIdJson() {
   try {
-    var idCard = await fetch("https://mind-hub.up.railway.app/amazing");
+    var idCard = await fetch("https://mh-amazing.herokuapp.com/amazing");
     idCard = await idCard.json();
   } catch (error) {
     console.log(error);
