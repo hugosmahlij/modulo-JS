@@ -103,3 +103,7 @@
     height: 100% !important;
     object-fit: cover !important;
 }
+
+.data_table{
+    text-align: center;
+}

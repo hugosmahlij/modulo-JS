@@ -59,9 +59,9 @@ async function apiEvents(){
             }
         })
         table3.innerHTML += `<tr>
-                                <td>${element}</td>
-                                <td>${revenues.toLocaleString('de-DE')}</td>
-                                <td>${Math.round(assistance * 100 / capacity)}%</td>
+                                <td class="data_table">${element}</td>
+                                <td class="data_table">${revenues.toLocaleString('de-DE')}</td>
+                                <td class="data_table">${Math.round(assistance * 100 / capacity)}%</td>
                             </tr>`
     });
 
@@ -77,16 +77,16 @@ async function apiEvents(){
             }
         })
         table2.innerHTML += `<tr>
-                                <td>${element}</td>
-                                <td>${revenues.toLocaleString('de-DE')}</td>
-                                <td>${Math.round(estimate * 100 / capacity)}%</td>
+                                <td class="data_table">${element}</td>
+                                <td class="data_table">${revenues.toLocaleString('de-DE')}</td>
+                                <td class="data_table">${Math.round(estimate * 100 / capacity)}%</td>
                             </tr>`
                         });
                         
-        table1.innerHTML += `<tr">
-                                <td >${maxPercAssi.name}: ${maxPercAssi.percentageAssistance}%</td>
-                                <td>${minPercAssi.name}: ${minPercAssi.percentageAssistance}%</td>
-                                <td>${maxCapEvent.name}: ${parseInt(maxCapEvent.capacity).toLocaleString('de-DE')}</td>
+        table1.innerHTML += `<tr>
+                                <td class="data_table">${maxPercAssi.name}: ${maxPercAssi.percentageAssistance}%</td>
+                                <td class="data_table">${minPercAssi.name}: ${minPercAssi.percentageAssistance}%</td>
+                                <td class="data_table">${maxCapEvent.name}: ${parseInt(maxCapEvent.capacity).toLocaleString('de-DE')}</td>
                             </tr>`
 }
 apiEvents()
