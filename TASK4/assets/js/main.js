@@ -6,7 +6,7 @@ const inputSearch = document.getElementById("search");
 async function bringEventsJson() {
   try {
     var eventsJsonApi = await fetch(
-      "https://mind-hub.up.railway.app/amazing"
+      "https://mh-amazing.herokuapp.com/amazing"
     );
     eventsJsonApi = await eventsJsonApi.json();
   } catch (error) {
